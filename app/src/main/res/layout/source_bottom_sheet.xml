@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="170sp"
+    android:background="@color/dark_blue">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:text="Image from..."
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="25sp"
+        android:layout_height="25sp"
+        android:layout_margin="20sp"
+        android:id="@+id/deleteImageBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_delete"
+        app:tint="#B1B1B1" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/cameraFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="20sp"
+        app:elevation="0sp"
+        android:backgroundTint="@color/dark_blue"
+        app:borderWidth="0.5sp"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/ic_camera"
+        app:tint="@color/teal_200" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/dark_blue"
+        app:borderWidth="0.5sp"
+        app:elevation="0sp"
+        android:id="@+id/galleryFab"
+        android:layout_marginStart="40sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cameraFab"
+        app:layout_constraintStart_toEndOf="@+id/cameraFab"
+        app:layout_constraintTop_toTopOf="@+id/cameraFab"
+        app:srcCompat="@drawable/ic_gallery"
+        app:tint="@color/teal_200" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Camera"
+        android:textColor="@color/white"
+        android:layout_marginTop="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/cameraFab"
+        app:layout_constraintStart_toStartOf="@+id/cameraFab"
+        app:layout_constraintTop_toBottomOf="@+id/cameraFab" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gallery"
+        android:textColor="@color/white"
+        android:layout_marginTop="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/galleryFab"
+        app:layout_constraintStart_toStartOf="@+id/galleryFab"
+        app:layout_constraintTop_toBottomOf="@+id/galleryFab" />
+</androidx.constraintlayout.widget.ConstraintLayout>

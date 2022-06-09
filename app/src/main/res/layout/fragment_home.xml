@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark"
+    tools:context=".HomeFragment">
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:text="AI Lens"
+        android:textColor="@color/white"
+        android:textSize="65sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="100sp"
+        android:layout_marginHorizontal="60sp"/>
+
+    <RelativeLayout
+        android:layout_width="0sp"
+        android:layout_height="300sp"
+        android:layout_marginTop="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleText">
+
+        <ImageView
+            android:id="@+id/imageToScan"
+            android:layout_width="match_parent"
+            android:layout_height="300sp"
+            android:layout_centerInParent="true"
+            android:padding="10sp"
+            android:src="@drawable/ic_scanner"
+            app:tint="@color/white" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/imageFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:backgroundTint="@color/white"
+            app:borderWidth="0sp"
+            app:elevation="2sp"
+            app:fabSize="mini"
+            app:srcCompat="@drawable/ic_camera"
+            app:tint="#373737" />
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="0sp"
+        android:layout_height="60sp"
+        android:backgroundTint="#0073FF"
+        android:layout_margin="20sp"
+        android:text="Search"
+        android:id="@+id/searchBtn"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/successBackground"
+        android:layout_width="1dp"
+        android:layout_height="2dp"
+        android:alpha="0"
+        android:background="@color/teal_200"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/successImage"
+        android:layout_width="120sp"
+        android:layout_height="120sp"
+        android:src="@drawable/ic_check"
+        android:alpha="0"
+        app:layout_constraintBottom_toBottomOf="@+id/searchBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+</androidx.constraintlayout.widget.ConstraintLayout>

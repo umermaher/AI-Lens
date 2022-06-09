@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "531549933071",
+    "project_id": "ai-lens",
+    "storage_bucket": "ai-lens.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:531549933071:android:13772a583287b4ce435d7a",
+        "android_client_info": {
+          "package_name": "com.example.ailens"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "531549933071-f1seraaif2tjg7jkfe2vh1omps1tk505.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYeJITdSLgZ9r3qpuNBPJIYeLXQbuK4dI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "531549933071-f1seraaif2tjg7jkfe2vh1omps1tk505.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
