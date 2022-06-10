@@ -12,15 +12,27 @@
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_homeFragment_to_successFragment"
-            app:destination="@id/successFragment" />
+            app:destination="@id/successFragment"
+            app:enterAnim="@anim/from_bottom"
+            app:exitAnim="@anim/to_top"
+            app:popEnterAnim="@anim/from_top"
+            app:popExitAnim="@anim/to_bottom" />
     </fragment>
     <fragment
         android:id="@+id/successFragment"
         android:name="com.example.ailens.SuccessFragment"
         android:label="Result"
         tools:layout="@layout/fragment_success" >
+
         <action
             android:id="@+id/action_successFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+        <argument
+            android:name="searchResultList"
+            app:argType="com.example.ailens.SearchResultList" />
+        <!--        <argument-->
+<!--            android:name="searchResultList"-->
+<!--            app:argType="com.example.ailens.SearchResultList" />-->
+
     </fragment>
 </navigation>

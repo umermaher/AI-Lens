@@ -3,8 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardBackgroundColor="@color/dark"
-    android:layout_margin="5sp"
+    app:cardBackgroundColor="@color/dark_blue"
+    android:layout_margin="6sp"
     app:cardCornerRadius="10sp"
     app:cardElevation="5sp">
 
@@ -20,7 +20,8 @@
             android:textSize="15sp"
             android:textStyle="bold"
             android:textColor="@color/white"
-            android:layout_margin="5sp"
+            android:layout_marginStart="5sp"
+            android:layout_marginTop="5sp"
             android:padding="5sp"/>
         <TextView
             android:layout_width="match_parent"
@@ -32,7 +33,7 @@
             android:textAllCaps="false"
             android:textStyle="bold"
             android:textColor="@color/white"
-            android:layout_margin="4sp"
+            android:layout_marginStart="5sp"
             android:padding="3sp"/>
         <TextView
             android:layout_width="match_parent"
@@ -44,7 +45,7 @@
             android:id="@+id/searchDescription"
             android:textStyle="bold"
             android:textColor="@color/white"
-            android:layout_margin="4sp"
+            android:layout_marginStart="4sp"
             android:padding="3sp"/>
     </LinearLayout>
 

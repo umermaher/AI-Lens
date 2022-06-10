@@ -4,16 +4,20 @@ import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.browser.customtabs.CustomTabsIntent
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.ailens.databinding.FragmentSuccessBinding
 
 class SuccessFragment : Fragment() {
+    private val args:SuccessFragmentArgs by navArgs()
     private var _binding:FragmentSuccessBinding?=null
     private val binding get() = _binding!!
-    private val searchResultList:List<SearchResult> =ArrayList()
+    private var searchResultList:List<SearchResult> =ArrayList()
     private lateinit var srAdapter: SearchResultAdapter
 
     override fun onCreateView(
@@ -23,11 +27,12 @@ class SuccessFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentSuccessBinding.inflate(inflater, container, false)
 
+        searchResultList=args.searchResultList
+
         srAdapter= SearchResultAdapter(requireContext(),searchResultList,createSearchItemClickListener())
         binding.rvSearchResult.layoutManager=LinearLayoutManager(requireActivity())
         binding.rvSearchResult.setHasFixedSize(true)
         binding.rvSearchResult.adapter=srAdapter
-
 
         return binding.root
     }
@@ -39,5 +44,9 @@ class SuccessFragment : Fragment() {
             val customTabsIntent = builder.build();
             customTabsIntent.launchUrl(requireContext(), Uri.parse(url));
         }
+    }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        this._binding =null
     }
 }
