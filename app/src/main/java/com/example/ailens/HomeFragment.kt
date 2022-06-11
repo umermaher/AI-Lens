@@ -94,12 +94,12 @@ class HomeFragment : Fragment() {
                 .setActionTextColor(ContextCompat.getColor(requireContext(),R.color.white))
                 .show()
         }else{
-        lifecycleScope.launch {
-            getResults()
-            delay(2000)
-            applyAnimation()
-            navigateToSuccess()
-        }
+            lifecycleScope.launch {
+                getResults()
+                delay(1000)
+                    applyAnimation()
+                    navigateToSuccess()
+            }
         }
     }
     private fun getResults(){
@@ -119,6 +119,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun getSearchResult(searchQuery: String) {
+        searchList.clear()
         val url="https://serpapi.com/search.json?engine=google&q=$searchQuery&api_key=7a4dbf1c3c59955d894f578dcb9f04fe40b1c7b2efddb711537c515b42b63966"
         val jsonObjectRequest=object: JsonObjectRequest(Request.Method.GET,url,null,
             {

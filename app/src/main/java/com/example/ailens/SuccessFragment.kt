@@ -29,10 +29,12 @@ class SuccessFragment : Fragment() {
 
         searchResultList=args.searchResultList
 
-        srAdapter= SearchResultAdapter(requireContext(),searchResultList,createSearchItemClickListener())
-        binding.rvSearchResult.layoutManager=LinearLayoutManager(requireActivity())
-        binding.rvSearchResult.setHasFixedSize(true)
-        binding.rvSearchResult.adapter=srAdapter
+        searchResultList?.let {
+            srAdapter= SearchResultAdapter(requireContext(),searchResultList,createSearchItemClickListener())
+            binding.rvSearchResult.layoutManager=LinearLayoutManager(requireActivity())
+            binding.rvSearchResult.setHasFixedSize(true)
+            binding.rvSearchResult.adapter=srAdapter
+        }
 
         return binding.root
     }

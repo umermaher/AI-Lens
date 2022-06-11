@@ -21,8 +21,8 @@
     <fragment
         android:id="@+id/successFragment"
         android:name="com.example.ailens.SuccessFragment"
-        android:label="Result"
-        tools:layout="@layout/fragment_success" >
+        android:label="Results"
+        tools:layout="@layout/fragment_success">
 
         <action
             android:id="@+id/action_successFragment_to_homeFragment"
@@ -31,8 +31,8 @@
             android:name="searchResultList"
             app:argType="com.example.ailens.SearchResultList" />
         <!--        <argument-->
-<!--            android:name="searchResultList"-->
-<!--            app:argType="com.example.ailens.SearchResultList" />-->
+        <!--            android:name="searchResultList"-->
+        <!--            app:argType="com.example.ailens.SearchResultList" />-->
 
     </fragment>
 </navigation>
